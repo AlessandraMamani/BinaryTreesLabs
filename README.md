@@ -26,3 +26,4 @@ make
 
 Las implementaciones iniciales de `tree_algorithms.c` son solo esqueletos para
 permitir que el proyecto compile. Deben ser reemplazadas durante la práctica.
+# BinaryTreesLabs
