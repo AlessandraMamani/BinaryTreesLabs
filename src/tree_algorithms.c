@@ -10,18 +10,20 @@
  */
 
 size_t treeSize(const Node *root) {
-  (void)root;
-  return 0;
+  if(root == NULL) return 0;
+  return 1 + treeSize(root->left) + treeSize(root->right);
 }
 
 int maxDepth(const Node *root) {
-  (void)root;
-  return 0;
+  if(root == NULL) return 0;
+  size_t right = maxDepth(root->right);
+  size_t left = maxDepth(root->left);
+  return 1 + (right > left) ? right : left;
 }
 
 int minValue(const Node *root) {
-  (void)root;
-  return 0;
+  if(root == NULL) return 0;
+
 }
 
 void printTree(const Node *root) {

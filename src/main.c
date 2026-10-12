@@ -23,6 +23,12 @@ static Node *buildExample(void) {
   return root;
 }
 
+static Node* build123(){
+  struct Node* root = (NULL, 2);
+  root = insert(root, 1);
+  root = insert(root, 3);
+}
+
 int main(void) {
   Node *root = buildExample();
 
@@ -33,20 +39,20 @@ int main(void) {
 
   /*
    * Active estas pruebas a medida que implemente las funciones.
-   *
-   * printf("size = %zu\n", treeSize(root));
-   * printf("maxDepth = %d\n", maxDepth(root));
-   * printf("minValue = %d\n", minValue(root));
-   *
-   * printf("inorder: ");
-   * printTree(root);
-   * printf("\n");
-   *
-   * printf("postorder: ");
-   * printPostorder(root);
-   * printf("\n");
    */
-
+   
+  printf("size = %zu\n", treeSize(root));
+  printf("maxDepth = %d\n", maxDepth(root));
+  printf("minValue = %d\n", minValue(root));
+  
+  printf("inorder: ");
+  printTree(root);
+  printf("\n");
+  
+  printf("postorder: ");
+  printPostorder(root);
+  printf("\n");
+   
   freeTree(root);
   return EXIT_SUCCESS;
 }
